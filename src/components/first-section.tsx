@@ -1,15 +1,20 @@
-import { useState } from 'react';
 import dayjs from 'dayjs';
+
+import { useState } from 'react';
 import { useTimer } from '../hooks/useTimer';
 import { useHeartbeat } from '../hooks/useHeartbeat';
+
+import kissingHer from "../../public/photos/kissing-her.jpeg";
+import mplusg from "../../public/photos/mplusg.jpeg";
+import skatepark from "../../public/photos/skatepark.jpeg"
 
 export const FirstSection = () => {
 
   // Array de fotos
   const photos = [
-    "kissing-her.jpeg",
-    "mplusg.jpeg",
-    "skatepark.jpeg"
+    kissingHer,
+    mplusg,
+    skatepark
   ];
 
   // Estado para controlar a imagem atual do carrossel
@@ -68,7 +73,7 @@ export const FirstSection = () => {
                     <div 
                         className='w-[200px] h-[200px] bg-[#B0B0B0] rounded-[8px] overflow-hidden'
                         style={{
-                            backgroundImage: `url('/photos/${photos[currentImageIndex]}')`,
+                            backgroundImage: `url('${photos[currentImageIndex]}')`,
                             backgroundSize: "contain",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat"
